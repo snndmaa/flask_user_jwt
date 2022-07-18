@@ -73,6 +73,9 @@ class Template:
         except KeyError:
             return jsonify({ "error": "Missing Fields!" })
 
+        except:
+            return jsonify({ "error": "Special Error" })
+
     def delete_one(self, template_id):
 
         filter = { '_id': template_id }
