@@ -4,7 +4,7 @@ from token_required import token_required
 
 @app.route('/template/', methods=['POST'])
 @token_required
-def create_template():
+def create_template(current_user):
     return Template().create()
 
 @app.route('/template/', methods=['GET'])
