@@ -1,0 +1,4 @@
+setx FLASK_APP "app.py"
+setx FLASK_ENV "development"
+setx FLASK_DEBUG "True"
+flask run
