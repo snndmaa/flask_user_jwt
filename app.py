@@ -9,7 +9,8 @@ load_dotenv()
 app = Flask(__name__)
 
 # Databases
-client = pymongo.MongoClient(os.getenv('MONGO_URI'))
+# client = pymongo.MongoClient(os.getenv('MONGO_URI'))
+client = pymongo.MongoClient('mongodb+srv://sandman:sobriety@cluster0.lr58k.mongodb.net/?retryWrites=true&w=majority')
 db = client.flask_test
 
 # Routes
