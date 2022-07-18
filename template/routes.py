@@ -10,13 +10,11 @@ def create_template():
 @app.route('/template/', methods=['GET'])
 @token_required
 def get_templates(current_user):
-    print(current_user)
     return Template().get_all()
 
 @app.route('/template/<template_id>', methods=['GET'])
 @token_required
 def get_template(current_user, template_id):
-    print(template_id)
     return Template().get_one(template_id)
 
 @app.route('/template/<template_id>', methods=['PUT'])
