@@ -18,7 +18,7 @@ from template import routes
 
 @app.get('/')
 def home():
-    return 'Home'
+    return 'This is the homepage. Please use Postman to test the endpoints given in the Test File'
 
 
 if __name__ == '__main__':
