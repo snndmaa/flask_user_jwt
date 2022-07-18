@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from token_required import token_required
+from flask_cors import CORS
+from dotenv import load_dotenv
 import pymongo
 import os
-from dotenv import load_dotenv
 
 
 load_dotenv()
 app = Flask(__name__)
+CORS(app)
 
 # Databases
 # client = pymongo.MongoClient(os.getenv('MONGO_URI'))
