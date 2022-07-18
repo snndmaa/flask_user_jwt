@@ -1,10 +1,10 @@
 from app import app
 from user.models import User
 
-@app.route('/user/signup', methods=['POST',])
+@app.route('/register', methods=['POST',])
 def signup():
     return User().signup()
 
-@app.route('/user/login', methods=['POST',])
+@app.route('/login', methods=['POST',])
 def login():
     return User().login()
